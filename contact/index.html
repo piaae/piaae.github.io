@@ -119,7 +119,7 @@ gtag("config", "G-9M8CJHMXN9");
   document.onmousedown = mousehandler;
   document.onmouseup = mousehandler;
   </script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body class="page-template page-template-contact page-template-contact-php page page-id-22">
@@ -191,24 +191,17 @@ Musaffah, Abu Dhabi, United Arab Emirates          </div>
          
       <div class="col slideanim">
         <h3 class="cont-title">CONTACT FORM</h3>
-<form method="">
+<form id="submit-form">
     <div class="row g-container">
   <div class="form-group col left-part-form">
     <div role="form" class="wpcf7" id="wpcf7-f68-o1" lang="en-US" dir="ltr">
 <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
 <form action="" method="" class="wpcf7-form init" novalidate="novalidate" data-status="init">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="68" />
-<input type="hidden" name="_wpcf7_version" value="5.3" />
-<input type="hidden" name="_wpcf7_locale" value="en_US" />
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f68-o1" />
-<input type="hidden" name="_wpcf7_container_post" value="0" />
-<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-</div>
-<p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" /></span><br />
-<span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" /></span><br />
-<span class="wpcf7-form-control-wrap your-mobile"><input type="text" name="your-mobile" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Mobile" /></span><br />
-<span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Message"></textarea></span></p>
+
+<p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"  placeholder="Name" required/></span><br />
+<span class="wpcf7-form-control-wrap your-email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Email" required/></span><br />
+<span class="wpcf7-form-control-wrap your-mobile"><input type="number" name="number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"  placeholder="Mobile" required/></span><br />
+<span class="wpcf7-form-control-wrap your-message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"  placeholder="Message" required></textarea></span></p>
 <p><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" /></p>
 <div class="wpcf7-response-output" aria-hidden="true"></div></form></div><!--   <input class="input" type="text" name="name" class="form-control" required="" placeholder="Name">
     <input class="input" type="email" name="email" class="form-control" required="" placeholder="Email">
@@ -219,6 +212,26 @@ Musaffah, Abu Dhabi, United Arab Emirates          </div>
   </div>
   </div> 
 </form>
+
+<script>
+  $("#submit-form").submit((e)=>{
+  e.preventDefault()
+  $.ajax({
+  url:"https://script.google.com/macros/s/AKfycbxmtwt2qV0LC4JBuQPk6U0ErcdeOT0RqeT8GxGVBgYbU7zoeCiPOfZ3voN8iUC2mNwmig/exec",
+  data:$("#submit-form").serialize(),
+  method:"post",
+  success:function (response){
+  alert("Our sales team will contact you shortly. Thank you!")
+  window.location.reload()
+  //window.location.href="https://google.com"
+  },
+  error:function (err){
+  alert("Something Error")
+  
+  }
+  })
+  })
+  </script>
 
       </div>
     </div>
