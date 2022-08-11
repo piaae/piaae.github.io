@@ -397,41 +397,51 @@ Musaffah, Abu Dhabi, United Arab Emirates          </div>
           </a> 
           </div> 
          
-      <div class="col slideanim">
-        <h3 class="cont-title">CONTACT FORM</h3>
-<div role="form" class="wpcf7" id="wpcf7-f68-o1" lang="en-US" dir="ltr">
-<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form id="submit-form" action="" class="wpcf7-form init" novalidate="novalidate" data-status="init">
-
-<p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="Name" required/></span><br />
-<span class="wpcf7-form-control-wrap your-email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" placeholder="Email" required/></span><br />
-<span class="wpcf7-form-control-wrap your-mobile"><input type="number" name="number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="Mobile" required/></span><br />
-<span class="wpcf7-form-control-wrap your-message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" placeholder="Message" required></textarea></span></p>
-<p><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" /></p>
-<div class="wpcf7-response-output" aria-hidden="true"></div></form>
-
-
-<script>
-  $("#submit-form").submit((e)=>{
-  e.preventDefault()
-  $.ajax({
-  url:"https://script.google.com/macros/s/AKfycbxmtwt2qV0LC4JBuQPk6U0ErcdeOT0RqeT8GxGVBgYbU7zoeCiPOfZ3voN8iUC2mNwmig/exec",
-  data:$("#submit-form").serialize(),
-  method:"post",
-  success:function (response){
-  alert("Our sales team will contact you shortly. Thank you!")
-  window.location.reload()
-  //window.location.href="https://google.com"
-  },
-  error:function (err){
-  alert("Something Error")
-  
-  }
-  })
-  })
-  </script>
-
-</div>
+          <div class="col slideanim">
+            <h3 class="cont-title">CONTACT FORM</h3>
+    <form id="submit-form">
+        <div class="row g-container">
+      <div class="form-group col left-part-form">
+        <div role="form" class="wpcf7" id="wpcf7-f68-o1" lang="en-US" dir="ltr">
+    <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+    <form action="" method="" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+    
+    <p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"  placeholder="Name" required/></span><br />
+    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Email" required/></span><br />
+    <span class="wpcf7-form-control-wrap your-mobile"><input type="number" name="number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"  placeholder="Mobile" required/></span><br />
+    <span class="wpcf7-form-control-wrap your-message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"  placeholder="Message" required></textarea></span></p>
+    <p><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" /></p>
+    <div class="wpcf7-response-output" aria-hidden="true"></div></form></div><!--   <input class="input" type="text" name="name" class="form-control" required="" placeholder="Name">
+        <input class="input" type="email" name="email" class="form-control" required="" placeholder="Email">
+        <input class="input" type="tel" name="phone" class="form-control" placeholder="Phone">
+        <textarea class="input" name="message" placeholder="Your Message" class="form-control"></textarea>
+        
+        <input type="submit" name="submt_btn" class="form-input bt-color-red more-bt" value="Submit"> --> 
+      </div>
+      </div> 
+    </form>
+    
+    <script>
+      $("#submit-form").submit((e)=>{
+      e.preventDefault()
+      $.ajax({
+      url:"https://script.google.com/macros/s/AKfycbxmtwt2qV0LC4JBuQPk6U0ErcdeOT0RqeT8GxGVBgYbU7zoeCiPOfZ3voN8iUC2mNwmig/exec",
+      data:$("#submit-form").serialize(),
+      method:"post",
+      success:function (response){
+      alert("Our sales team will contact you shortly. Thank you!")
+      window.location.reload()
+      //window.location.href="https://google.com"
+      },
+      error:function (err){
+      alert("Something Error")
+      
+      }
+      })
+      })
+      </script>
+    
+          </div>
       </div>
     </div>
   </div>
